@@ -7,7 +7,7 @@
 }
 
 .player {
-    margin: 100px auto;
+    margin: 300px auto;
     width: 540px;
     height: 169px;
     background: #111111;
@@ -39,8 +39,15 @@
 
             .spotify {
                 background-image: url(../assets/icons/spotify.svg);
+                background-size: contain;
                 width: 21px;
                 height: 21px;
+                cursor: pointer;
+            }
+
+            .spotify:hover {
+                background-image: url(../assets/icons/spotify-green.png);
+                transform: scale(1.2);
             }
         }
 
@@ -56,10 +63,17 @@
             justify-content: space-between;
             align-items: center;
 
-            .line {
-                background-image: url(../assets/icons/line-time.svg);
+            .line-progress {
+                background-color: #DADADA;
                 width: 257px;
                 height: 3px;
+                cursor: pointer;
+
+                .line {
+                    height: 3px;
+                    width: 0;
+                    background-color: #1DB954;
+                }
             }
 
             .time {
@@ -78,6 +92,9 @@
                 background-size: contain;
                 width: 16px;
                 height: 16px;
+                cursor: pointer;
+                animation: none;
+                -webkit-animation: none;
             }
 
             .top-buttons {
@@ -92,6 +109,7 @@
                     background-repeat: no-repeat;
                     width: 35px;
                     height: 35px;
+                    cursor: pointer;
                 }
 
                 .play {
@@ -100,6 +118,7 @@
                     background-repeat: no-repeat;
                     width: 38px;
                     height: 38px;
+                    cursor: pointer;
                 }
 
                 .next {
@@ -108,6 +127,13 @@
                     background-repeat: no-repeat;
                     width: 35px;
                     height: 35px;
+                    cursor: pointer;
+                }
+
+                .prev:hover,
+                .play:hover,
+                .next:hover {
+                    transform: scale(1.1);
                 }
             }
 
@@ -116,7 +142,28 @@
                 background-size: contain;
                 width: 18px;
                 height: 15.5px;
+                cursor: pointer;
             }
         }
+    }
+}
+
+@keyframes repeat {
+    0% {
+        transform: rotate(-0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes repeat {
+    0% {
+        transform: rotate(-0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
     }
 }
