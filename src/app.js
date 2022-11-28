@@ -34,10 +34,10 @@ const songs = [{
         likeFlag: false
     },
     {
-        author: 'Markul',
-        title: 'Худший друг',
-        src: '../audio/Markul-Худший друг.mp3',
-        image: '../assets/img/markul.jpg',
+        author: 'Miyagi & Andy Panda',
+        title: 'Minor',
+        src: '../audio/Miyagi & Andy Panda-Minor.mp3',
+        image: '../assets/img/miyagi.jpg',
         likeFlag: false
     },
     {
